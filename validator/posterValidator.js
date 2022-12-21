@@ -3,7 +3,7 @@ const posterValidator = (req, res, next) => {
 	if (poster && imdbId) {
 		next();
 	} else if (!poster) {
-		res.json({ success: false, message: "no poster" });
+		res.json({ success: false, message: "no poster..Please add" });
 	} else if (!imdbId) {
 		res.json({ success: false, message: "no id" });
 	} else {
