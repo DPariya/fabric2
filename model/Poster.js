@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const posterSchema = new Schema(
 	{
-		posterUrl: {
+		poster: {
 			type: String,
 			required: true,
 		},
@@ -18,7 +18,7 @@ const posterSchema = new Schema(
 	}
 );
 
-ActivitySchema.index({
+posterSchema.index({
 	id: 1,
 });
 module.exports = mongoose.model("Poster", posterSchema);
